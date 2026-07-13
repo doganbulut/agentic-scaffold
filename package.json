@@ -1,0 +1,30 @@
+{
+  "name": "agentic-scaffold",
+  "version": "1.0.0",
+  "description": "A project scaffold designed for AI-agent collaboration. Stop repeating instructions to your AI — this template tells it everything.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node init/setup.mjs",
+    "dev": "npx tsx watch src/main.ts",
+    "build": "npm run format:check && npm run lint && tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "ci": "bash scripts/ci.sh",
+    "ci:win": "powershell -File scripts/ci.ps1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.1",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.5",
+    "tsx": "^4.23.1",
+    "typescript": "5.7",
+    "typescript-eslint": "^8.64.0",
+    "vitest": "^4.1.10"
+  }
+}
